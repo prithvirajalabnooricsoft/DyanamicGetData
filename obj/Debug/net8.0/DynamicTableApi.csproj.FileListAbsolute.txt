@@ -4,6 +4,7 @@ D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetDa
 D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetData\bin\Debug\net8.0\DynamicTableApi.deps.json
 D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetData\bin\Debug\net8.0\DynamicTableApi.runtimeconfig.json
 D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetData\bin\Debug\net8.0\DynamicTableApi.dll
+D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetData\bin\Debug\net8.0\DynamicTableApi.pdb
 D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetData\bin\Debug\net8.0\Azure.Core.dll
 D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetData\bin\Debug\net8.0\Azure.Identity.dll
 D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetData\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -52,6 +53,7 @@ D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetDa
 D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetData\obj\Debug\net8.0\DynamicTableApi.csproj.CoreCompileInputs.cache
 D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetData\obj\Debug\net8.0\DynamicTableApi.MvcApplicationPartsAssemblyInfo.cs
 D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetData\obj\Debug\net8.0\DynamicTableApi.MvcApplicationPartsAssemblyInfo.cache
+D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetData\obj\Debug\net8.0\DynamicTableApi.sourcelink.json
 D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetData\obj\Debug\net8.0\rjimswa.dswa.cache.json
 D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetData\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetData\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
@@ -66,5 +68,4 @@ D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetDa
 D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetData\obj\Debug\net8.0\refint\DynamicTableApi.dll
 D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetData\obj\Debug\net8.0\DynamicTableApi.pdb
 D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetData\obj\Debug\net8.0\DynamicTableApi.genruntimeconfig.cache
-D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetData\bin\Debug\net8.0\DynamicTableApi.pdb
 D:\UserProfile\prithviraj.alabnoor\Documents\WorkFolder\ERP_AI_API\DyanamicGetData\obj\Debug\net8.0\ref\DynamicTableApi.dll
