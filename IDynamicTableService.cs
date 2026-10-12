@@ -27,4 +27,6 @@ public interface IDynamicTableService
     /// The target has no column this server can date its rows by.
     /// </exception>
     Task<WatermarkResponse> GetWatermarkAsync(string tableName, CancellationToken cancellationToken);
+
+    Task<PrefixTablesResponse> RegisterPrefixTablesAsync(string prefix, CancellationToken cancellationToken);
 }

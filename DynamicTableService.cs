@@ -729,6 +729,61 @@ public class DynamicTableService : IDynamicTableService
         };
     }
 
+    public async Task<PrefixTablesResponse> RegisterPrefixTablesAsync(
+        string prefix,
+        CancellationToken cancellationToken)
+    {
+        var response = new PrefixTablesResponse { Prefix = prefix };
+
+        using var connection = new SqlConnection(_connectionString);
+        await connection.OpenAsync(cancellationToken);
+
+        var tables = new List<string>();
+        const string findSql =
+            "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES " +
+            "WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME LIKE @pattern " +
+            "ORDER BY TABLE_NAME;";
+
+        using (var command = new SqlCommand(findSql, connection))
+        {
+            command.CommandTimeout = _commandTimeoutSeconds;
+            command.Parameters.Add("@pattern", SqlDbType.NVarChar, 512).Value = prefix + "_%";
+
+            using var reader = await command.ExecuteReaderAsync(cancellationToken);
+            while (await reader.ReadAsync(cancellationToken))
+            {
+                tables.Add(reader.GetString(0));
+            }
+        }
+
+        response.TotalTablesFound = tables.Count;
+        response.Tables = tables;
+
+        foreach (var tableName in tables)
+        {
+            const string checkSql =
+                "IF NOT EXISTS (SELECT 1 FROM dbo.MasterTableQuery WHERE TableName = @tableName) " +
+                "BEGIN INSERT INTO dbo.MasterTableQuery (TableName, Active) VALUES (@tableName, 1); SELECT 1; END " +
+                "ELSE BEGIN SELECT 0; END";
+
+            using var insertCmd = new SqlCommand(checkSql, connection);
+            insertCmd.CommandTimeout = _commandTimeoutSeconds;
+            insertCmd.Parameters.Add("@tableName", SqlDbType.VarChar, 500).Value = tableName;
+
+            var result = await insertCmd.ExecuteScalarAsync(cancellationToken);
+            if (result is int val && val == 1)
+                response.TablesInserted++;
+            else
+                response.TablesAlreadyExist++;
+        }
+
+        _logger.LogInformation(
+            "Prefix '{Prefix}': found {Total} table(s), inserted {Inserted}, already existed {Existing}.",
+            prefix, response.TotalTablesFound, response.TablesInserted, response.TablesAlreadyExist);
+
+        return response;
+    }
+
     private static string Describe(string? columnName, int index)
     {
         return string.IsNullOrWhiteSpace(columnName)

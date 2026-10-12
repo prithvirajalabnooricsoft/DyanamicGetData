@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DynamicTableApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1854700bd6533cf78cc090f547c5e66114c8f4eb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd380cb15c93ffa4e0f0cf55396d99e37dc8ae92")]
 [assembly: System.Reflection.AssemblyProductAttribute("DynamicTableApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DynamicTableApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

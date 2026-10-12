@@ -75,6 +75,40 @@ public class DataController : ControllerBase
     }
 
     /// <summary>
+    /// Finds all tables matching the given prefix and registers them in MasterTableQuery.
+    /// </summary>
+    /// <param name="prefix">Table name prefix, e.g. "SPH". Matches tables like SPH_MonthlyPLSummary.</param>
+    /// <response code="200">The list of tables found and how many were inserted.</response>
+    /// <response code="400">No prefix was provided.</response>
+    /// <response code="401">The X-Api-Key header is missing or wrong.</response>
+    [HttpGet("prefix-tables")]
+    [ProducesResponseType(typeof(PrefixTablesResponse), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    public async Task<IActionResult> PrefixTables(
+        [FromQuery] string prefix,
+        CancellationToken cancellationToken)
+    {
+        if (string.IsNullOrWhiteSpace(prefix))
+        {
+            return BadRequest("prefix is required.");
+        }
+
+        try
+        {
+            return Ok(await _service.RegisterPrefixTablesAsync(prefix.Trim(), cancellationToken));
+        }
+        catch (SqlException ex)
+        {
+            _logger.LogError(ex, "Prefix table registration for '{Prefix}' failed.", prefix);
+
+            return StatusCode(
+                StatusCodes.Status500InternalServerError,
+                $"SQL error {ex.Number} (line {ex.LineNumber}): {ex.Message}");
+        }
+    }
+
+    /// <summary>
     /// Inserts a batch of rows into the given table, optionally clearing it first.
     /// </summary>
     /// <remarks>

@@ -83,6 +83,15 @@ public class WatermarkResponse
     public string Expression { get; set; } = string.Empty;
 }
 
+public class PrefixTablesResponse
+{
+    public string Prefix { get; set; } = string.Empty;
+    public int TotalTablesFound { get; set; }
+    public int TablesInserted { get; set; }
+    public int TablesAlreadyExist { get; set; }
+    public List<string> Tables { get; set; } = new();
+}
+
 /// <summary>What the insert did, so the caller can log it and stamp its own status row.</summary>
 public class TableInsertResponse
 {

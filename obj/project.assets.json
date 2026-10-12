@@ -2124,22 +2124,25 @@
   },
   "packageFolders": {
     "D:\\UserProfile\\prithviraj.alabnoor\\.nuget\\packages\\": {},
+    "C:\\Program Files\\DevExpress 26.1\\Components\\Offline Packages": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\UserProfile\\prithviraj.alabnoor\\Documents\\WorkFolder\\ERP_AI_API\\DyanamicGetData\\DynamicTableApi.csproj",
+      "projectUniqueName": "d:\\UserProfile\\prithviraj.alabnoor\\Documents\\WorkFolder\\ERP_AI_API\\DyanamicGetData\\DynamicTableApi.csproj",
       "projectName": "DynamicTableApi",
-      "projectPath": "D:\\UserProfile\\prithviraj.alabnoor\\Documents\\WorkFolder\\ERP_AI_API\\DyanamicGetData\\DynamicTableApi.csproj",
+      "projectPath": "d:\\UserProfile\\prithviraj.alabnoor\\Documents\\WorkFolder\\ERP_AI_API\\DyanamicGetData\\DynamicTableApi.csproj",
       "packagesPath": "D:\\UserProfile\\prithviraj.alabnoor\\.nuget\\packages\\",
-      "outputPath": "D:\\UserProfile\\prithviraj.alabnoor\\Documents\\WorkFolder\\ERP_AI_API\\DyanamicGetData\\obj\\",
+      "outputPath": "d:\\UserProfile\\prithviraj.alabnoor\\Documents\\WorkFolder\\ERP_AI_API\\DyanamicGetData\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files\\DevExpress 26.1\\Components\\Offline Packages",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "D:\\UserProfile\\prithviraj.alabnoor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 26.1.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2148,6 +2151,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\DevExpress 26.1\\Components\\System\\Components\\Packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
